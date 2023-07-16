@@ -181,6 +181,7 @@ height: 100vh;
 .test-percentage > span{
     margin: 0;
     opacity: 0.5;
+    font-family: var(--HankenGrotesk);
 }
 .summry-list:nth-child(1){
     color: hsl(var(--LightRed));
