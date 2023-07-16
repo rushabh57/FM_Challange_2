@@ -135,7 +135,7 @@ height: 100vh;
 
 .Summary-container{
     padding: 30px;
-    /* font-family: var(--HankenGrotesk); */
+    font-family: var(--HankenGrotesk);
     background: var(--White);
 }
 .Summary-container-title{
