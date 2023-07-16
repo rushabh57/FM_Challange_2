@@ -1,0 +1,286 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+/* Links  */
+@import url('https://fonts.googleapis.com/css2?family=Hanken+Grotesk:wght@500;700;800&display=swap');
+
+/* lato  for number's*/
+@import url('https://fonts.googleapis.com/css2?family=Lato:ital,wght@1,700&display=swap');
+
+:root{
+  --LightRed: 0, 100%, 67%;
+  --OrangeyYellow: 39, 100%, 56%;
+  --GreenTeal:166, 100%, 37%;
+  --CobaltBlue:234, 85%, 45%;
+
+
+  /* Gradient's */
+  --LightSlateBlueBackground: hsl(252, 100%, 67%);
+  --LightRoyalBlueBackground: hsl(241, 81%, 54%);
+
+  --VioletBlueCircle: hsla(256, 72%, 46%, 1);
+  --PersianBlueCircle: hsla(241, 72%, 46%, 0);
+
+
+  /* Normal Color */
+  --White: hsl(0, 0%, 100%);
+  --PaleBlue: 221, 100%, 96%;
+  --LightLavender: hsl(241, 100%, 89%);
+  --DarkGrayBlue: hsl(224, 30%, 27%);
+
+
+  /* FontSize */
+  --paragraphs: 18px;
+  --HankenGrotesk: 'Hanken Grotesk', sans-serif;
+  --Lato: 'Lato', sans-serif;
+
+
+   --bRadius:2em;
+}
+/* attribution* */
+.attribution { font-size: 11px; text-align: center; }
+.attribution a { color: hsl(228, 45%, 44%); }
+
+body{
+background: var(--White);
+height: 100vh;
+}
+.container
+{
+    background: var(--White);
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    width: 100%;
+    height: 100%;
+}
+.card{
+    height: 65%;
+    width: 50%;
+
+    border-radius: var(--bRadius);
+    
+    display: grid;
+    grid-template-columns: repeat(2 , 1fr);
+    
+    overflow: hidden;
+
+    box-shadow:  hsla(var(--PaleBlue), 1) 15px 10px 15px 2px;
+}
+.Result-container,
+.Summary-container
+{
+    height: 100%;
+    width: 100%;
+}
+.Result-container{
+    background: linear-gradient(
+        var(--LightSlateBlueBackground),
+        var(--LightRoyalBlueBackground)
+    );
+    text-align: center;
+
+    padding: 30px;
+    font-family: var(--HankenGrotesk);
+
+    border-top-right-radius: var(--bRadius);
+    border-bottom-right-radius: var(--bRadius);
+}
+.Result-container-title{
+    color: hsla(var(--PaleBlue), .67);
+    font-weight: 800;
+}
+.circle{
+    text-align: center;
+
+    background: linear-gradient(
+        var(--VioletBlueCircle),
+        var(--PersianBlueCircle)
+    );
+    border-radius: 50%;
+    height: 125px;
+    width: 125px;
+
+    color: var(--White);
+    padding: 2rem;
+    margin:1em auto;
+
+}
+.circle h1{
+    /* font-family: 'Times New Roman', Times, serif; */
+    font-weight: 700;
+    font-size: 50px;
+    line-height: 1.05;
+}
+.circle p{
+    color: hsla(var(--PaleBlue), 0.4);
+    letter-spacing: .5px;
+    font-weight: 800;
+    line-height: 1;
+}
+.Result-container h2{
+    color: var(--White);
+    font-weight: 700;
+    margin-block: 1rem;
+}
+.Result-container > p{
+    color: var(--White);
+    font-weight: 500;
+}
+
+.Summary-container{
+    padding: 30px;
+    font-family: var(--HankenGrotesk);
+    background: var(--White);
+}
+.Summary-container-title{
+    color: var(--DarkGrayBlue);
+    font-size: var(--paragraphs);
+    font-weight: 800;
+}
+.summry-content{
+    height: 70%;
+    --opacity:.078;
+    margin-block: 1rem;
+}
+.summry-content .summry-list{
+    list-style: none;
+    height:40px;
+    margin: .5em 0em;
+    border-radius: calc(var(--bRadius) - 1.5em);
+
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+
+    padding: .9rem .5em;
+}
+.icon_name{
+    line-break: 1;
+    display: flex;
+    align-items: center;
+    gap: .5em;
+}
+.test-name{
+    font-size: 14px;
+    font-weight: 700;
+    letter-spacing: .5px;
+    
+}
+.test-percentage{
+    font-size: var(--paragraphs);
+    color: var(--DarkGrayBlue);
+    font-weight: 700;
+    margin: 0;
+}
+.test-percentage > span{
+    margin: 0;
+    opacity: 0.5;
+}
+.summry-list:nth-child(1){
+    color: hsl(var(--LightRed));
+    background: hsla(var(--LightRed), var(--opacity));
+}
+.summry-list:nth-child(2){
+    color: hsl(var(--OrangeyYellow));
+    background: hsla(var(--OrangeyYellow), var(--opacity));
+}
+.summry-list:nth-child(3){
+    color: hsl(var(--GreenTeal));
+    background: hsla(var(--GreenTeal),var(--opacity));
+}
+.summry-list:nth-child(4){
+    color: hsl(var(--CobaltBlue));
+    background: hsla(var(--CobaltBlue) , var(--opacity));
+}
+.Summary-container > button{
+    width: 100%;
+    height: 2.4rem;
+    border-radius: var(--bRadius);
+    background: var(--DarkGrayBlue);
+    font-family: var(--HankenGrotesk);
+    color: var(--White);
+    font-size: 15px;
+    font-weight: 500;
+    cursor: pointer;
+    border: 0;
+    outline: 0;
+}
+.Summary-container > button:hover{
+    background: linear-gradient(
+        var(--LightSlateBlueBackground),
+        var(--LightRoyalBlueBackground)
+    );
+}
+
+@media (max-width:895px) {
+    .container{
+        height:100%;
+        width: 100%;
+        margin:auto;
+    }
+    .test-percentage , p{
+        font-size: 12px;
+    }
+    .card{
+        width: 80%;
+    }
+
+    .Result-container{
+        border-top-right-radius:var(--bRadius);
+        border-bottom-right-radius: var(--bRadius);
+    }
+    
+}
+@media (max-width:580px) {
+    .container{
+        height:100%;
+        width: 100%;
+        margin:unset;
+    }
+    .test-percentage , p{
+        font-size: var(--paragraphs);
+    }
+
+    .card{
+        height: 100%;
+        width: 100%;
+        grid-template-columns: 1fr;
+        overflow:unset;
+    }
+    .Result-container{
+        border-top-right-radius:unset;
+        border-bottom-left-radius: var(--bRadius);
+        border-bottom-right-radius: var(--bRadius);
+    }
+    .summry-content .summry-list{
+        height:60px;
+        margin: 1em 0em;
+    }
+    .Summary-container > button{
+        height: 3.6rem;
+        font-size: var(--paragraphs);
+        font-weight: 700;
+    }
+    .circle{
+        height: 175px;
+        width: 175px;
+    }
+    .circle h1{
+        font-size: 80px;
+    }
+    .Result-container > p{
+        color: rgba(255, 255, 255, 0.538);
+        font-size: var(--paragraphs);
+        font-weight: 700;
+        width:85%;
+        margin: auto;
+    }
+    
+
+    
+}
